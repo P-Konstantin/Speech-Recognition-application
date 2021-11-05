@@ -1,0 +1,34 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+Распознование речи
+{% endblock %}
+
+{% block content %}
+<nav class="navbar navbar-expand-sm bg-info">
+    <h2 align="center">Распознование речи</h2>
+    <h3 align="center">Здесь вы можете распозновать речь в аудиофайлах и переводить её текст</h3>
+</nav>
+<img src="/static/images/mikrofon.jpg" class="img-circle pull-right" alt="Mikrofon" width="700" height="500">
+<div class="container">
+    <h4>Приложение работает с файлами в wav. формате </h4>
+    <h4>Обработка файла займёт несколько секунд</h4>
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="file" class="form-control-file border" name="file">
+        </div>
+            <button type="submit" class="btn btn-primary">Перевести в текст</button>
+    </form>
+    {% if transcript != "" %}
+    <h4>Текст файла</h4>
+    <h4> {{ transcript }} </h4>
+    {% endif %}
+    {% endblock %}
+</div>
+
+
+
+
+
+
+

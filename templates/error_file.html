@@ -1,0 +1,14 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+Ошибка распознования речи
+{% endblock %}
+
+{% block content %}
+<nav class="navbar navbar-expand-sm bg-info">
+    <h2>Упс! Ошибочка</h2>
+    <h3>Вы загрузили файл не в wav. формате</h3>
+    <h3>Чтобы приложение заработало загрузите аудиофайл в wav. формате</h3>
+</nav>
+<img src="/static/images/cat.png" class="img-rounded center-block" alt="Cat" width="400" height="400">
+{% endblock %}
